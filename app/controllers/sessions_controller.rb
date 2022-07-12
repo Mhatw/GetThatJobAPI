@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_before_action :authorize, only: :create
+  
   def create
     user = User.find_by(email: params[:email])
     if user&.authenticate(params[:password])
@@ -11,7 +13,7 @@ class SessionsController < ApplicationController
         userable: user.userable
       }
     else
-      render json: { error: "Incorrect email or password" }, status: :unauthorized
+      respond_unauthorized("Incorrect email or password")
     end
   end
 end
