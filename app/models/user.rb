@@ -4,7 +4,6 @@ class User < ApplicationRecord
   
   validates :email, presence: true, uniqueness: true
   validates :email, format: { with: VALID_EMAIL_REGEX }
-  validates :password, length: { minimum: 6 }
 
   # Associations
   belongs_to :userable, polymorphic: true
