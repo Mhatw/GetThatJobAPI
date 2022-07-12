@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_12_180427) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_12_221054) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,6 +20,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_12_180427) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email"
+    t.index ["email"], name: "index_companies_on_email", unique: true
   end
 
   create_table "professionals", force: :cascade do |t|
@@ -29,7 +31,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_12_180427) do
     t.string "linkedin_url"
     t.text "experience"
     t.text "education"
-    t.bigint "profession_id", null: false
+    t.bigint "profession_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["profession_id"], name: "index_professionals_on_profession_id"
@@ -39,6 +41,20 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_12_180427) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "requirements", force: :cascade do |t|
+    t.text "requirement"
+    t.boolean "mandatory"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_types_on_name", unique: true
   end
 
   create_table "users", force: :cascade do |t|
