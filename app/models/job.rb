@@ -8,6 +8,5 @@ class Job < ApplicationRecord
   has_many :professionals, through: :applications
 
   # Validations
-  validates :name, presence: true
-  validates :description, presence: true
+  validates :name, :description, presence: true
 end
