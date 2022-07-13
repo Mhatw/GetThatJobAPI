@@ -10,9 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_13_034916) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_13_050811) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "applications", force: :cascade do |t|
+    t.boolean "follow"
+    t.text "message"
+    t.bigint "job_id", null: false
+    t.bigint "professional_id", null: false
+    t.bigint "status_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["job_id"], name: "index_applications_on_job_id"
+    t.index ["professional_id"], name: "index_applications_on_professional_id"
+    t.index ["status_id"], name: "index_applications_on_status_id"
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -72,6 +85,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_13_034916) do
     t.index ["job_id"], name: "index_requirements_on_job_id"
   end
 
+  create_table "statuses", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "types", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -92,6 +111,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_13_034916) do
     t.index ["userable_type", "userable_id"], name: "index_users_on_userable"
   end
 
+  add_foreign_key "applications", "jobs"
+  add_foreign_key "applications", "professionals"
+  add_foreign_key "applications", "statuses"
   add_foreign_key "jobs", "categories"
   add_foreign_key "jobs", "companies"
   add_foreign_key "jobs", "types"
