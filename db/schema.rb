@@ -34,9 +34,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_13_034916) do
     t.text "description"
     t.integer "salary_min"
     t.integer "salary_max"
-    t.bigint "type_id", null: false
-    t.bigint "company_id", null: false
-    t.bigint "category_id", null: false
+    t.bigint "type_id"
+    t.bigint "company_id"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_jobs_on_category_id"
@@ -65,7 +65,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_13_034916) do
 
   create_table "requirements", force: :cascade do |t|
     t.text "content"
-    t.boolean "mandatory"
+    t.boolean "mandatory", default: false
     t.bigint "job_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
