@@ -4,6 +4,8 @@ class Job < ApplicationRecord
   belongs_to :company
   belongs_to :category
   has_many :requirements, dependent: :destroy
+  has_many :applications, dependent: :destroy
+  has_many :professionals, through: :applications
 
   # Validations
   validates :name, presence: true
