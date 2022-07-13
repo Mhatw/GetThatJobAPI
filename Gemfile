@@ -7,7 +7,7 @@ ruby "3.1.0"
 gem "rails", "~> 7.0.3"
 
 # Use postgresql as the database for Active Record
-gem "pg", "~> 1.1"
+# gem "pg", "~> 1.1"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -46,4 +46,8 @@ group :development do
   # gem "spring"
   gem "rubocop", require: false
   gem "rubocop-rails", require: false
+end
+
+group :production do
+  gem "pg", "~> 1.1"
 end
