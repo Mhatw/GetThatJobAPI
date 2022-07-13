@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_12_224654) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_13_034916) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -27,6 +27,21 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_12_224654) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_companies_on_name", unique: true
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "salary_min"
+    t.integer "salary_max"
+    t.bigint "type_id", null: false
+    t.bigint "company_id", null: false
+    t.bigint "category_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_jobs_on_category_id"
+    t.index ["company_id"], name: "index_jobs_on_company_id"
+    t.index ["type_id"], name: "index_jobs_on_type_id"
   end
 
   create_table "professionals", force: :cascade do |t|
@@ -49,10 +64,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_12_224654) do
   end
 
   create_table "requirements", force: :cascade do |t|
-    t.text "requirement"
+    t.text "content"
     t.boolean "mandatory"
+    t.bigint "job_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["job_id"], name: "index_requirements_on_job_id"
   end
 
   create_table "types", force: :cascade do |t|
@@ -75,5 +92,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_12_224654) do
     t.index ["userable_type", "userable_id"], name: "index_users_on_userable"
   end
 
+  add_foreign_key "jobs", "categories"
+  add_foreign_key "jobs", "companies"
+  add_foreign_key "jobs", "types"
   add_foreign_key "professionals", "professions"
+  add_foreign_key "requirements", "jobs"
 end
