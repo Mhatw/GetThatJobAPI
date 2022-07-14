@@ -28,6 +28,11 @@ class JobsController < ApplicationController
     end
   end
 
+  def destroy
+    job = current_user.userable.jobs.find(params[:id])
+    job.destroy
+  end
+
   private
 
   def job_params
