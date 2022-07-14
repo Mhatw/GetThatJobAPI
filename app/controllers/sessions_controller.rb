@@ -9,11 +9,16 @@ class SessionsController < ApplicationController
         token: user.token,
         id: user.id,
         email: user.email,
-        user_type: user.userable_type,
+        user_type: user.userable_type, 
         userable: user.userable
       }, status: :created
     else
       respond_unauthorized("Incorrect email or password")
     end
+  end
+
+  def destroy
+    current_user.invalidate_token
+    head :ok
   end
 end
