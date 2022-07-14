@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  
   post "/login" => "sessions#create"
-  
-  # resources :professional do
-  #   post "/login" => "sessions#create"
-  # end
+
+  resources :companies do
+    post "/signup" => "users#create"
+  end
+
+  resources :professionals do
+    post "/signup" => "users#create"
+  end
 end
