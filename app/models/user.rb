@@ -9,4 +9,8 @@ class User < ApplicationRecord
   belongs_to :userable, polymorphic: true
   has_secure_token
   has_secure_password
+
+  def invalidate_token
+    update(token: nil)
+  end
 end
