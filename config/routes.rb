@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   resources :companies do
     post "/signup" => "users#create"
-    get "/jobs" => "jobs#index"
   end
 
   resources :professionals do
