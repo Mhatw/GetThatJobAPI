@@ -15,8 +15,17 @@ class JobsController < ApplicationController
   end
 
   def show
-    job = Job.find(params[:id])
+    job = current_user.userable.jobs.find(params[:id])
     render json: job
+  end
+
+  def update
+    job = current_user.userable.jobs.find(params[:id])
+    if job.update(job_params)
+      render json: job
+    else
+      render json: { errors: job.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   private
