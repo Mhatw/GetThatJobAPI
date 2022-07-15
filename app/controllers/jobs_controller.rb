@@ -17,7 +17,18 @@ class JobsController < ApplicationController
   end
 
   def show
-    render json: @job
+    if current_user.userable == "Professional"
+      render json: {
+        job: @job,
+        company: @job.company
+      }
+    else
+      apps = add_proffesional_data(@job.applications)
+      render json: {
+        job: @job,
+        applications: apps
+      }
+    end
   end
 
   def update
@@ -35,10 +46,16 @@ class JobsController < ApplicationController
   private
 
   def set_job
-    @job = current_user.userable.jobs.find(params[:id])
+    @job = Job.find(params[:id])
   end
 
   def job_params
     params.require(:job).permit(:name, :description, :salary_min, :salary_max, :type_id, :category_id)
+  end
+
+  def add_proffesional_data(applications)
+    applications.map do |app|
+      { application: app, professional: app.professional }
+    end
   end
 end
