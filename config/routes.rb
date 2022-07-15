@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # get 'statuses/index'
   post "/login" => "sessions#create"
   delete "/logout" => "sessions#destroy"
 
@@ -16,4 +17,7 @@ Rails.application.routes.draw do
 
   resources :jobs
   resources :applications
+
+  resources :statuses, only: %i[index create]
+
 end
