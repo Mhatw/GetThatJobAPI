@@ -2,7 +2,12 @@ class JobsController < ApplicationController
   before_action :set_job, only: %i[show update destroy]
 
   def index
-    @jobs = current_user.userable_type == "Professional" ? Job.all : current_user.userable.jobs
+    if current_user.userable_type == "Professional"
+      @jobs = add_company_data(Job.all)
+    else
+      @jobs = current_user.userable.jobs
+    end
+    # @jobs = current_user.userable_type == "Professional" ? Job.all : current_user.userable.jobs
     render json: @jobs
   end
 
@@ -56,6 +61,12 @@ class JobsController < ApplicationController
   def add_proffesional_data(applications)
     applications.map do |app|
       { application: app, professional: app.professional }
+    end
+  end
+
+  def add_company_data(jobs)
+    jobs.map do |job| 
+      { job: job, company: job.company }
     end
   end
 end
