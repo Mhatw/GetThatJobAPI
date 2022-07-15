@@ -6,8 +6,9 @@ class Professional < ApplicationRecord
   has_many :jobs, through: :applications
 
   # validates
+  PHONE_REGEX = /\+[0-9]{6,13}/
   validates :name, presence: true
-  validates :phone, length: { is: 9 }
+  validates :phone, format: { with: PHONE_REGEX, message: "+[country code][number]" }
   validate :birth
 
   def birth
