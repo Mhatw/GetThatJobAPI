@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
-
 companies = Company.create([ #company es el modelo (es como una clase en Ruby) - create es el metodo de clase (no esta instanceado nada)
   {name:"Rappi", #01
   website:"https://www.rappi.com/jobs",
@@ -204,3 +196,12 @@ user = User.create([
   {email:"test@mail.com", password:"asdasd", password_confirmation:"asdasd", userable:Professional.first},
   {email:"testino@mail.com", password:"asdasd", password_confirmation:"asdasd", userable:Company.first}
 ])
+
+rappi = Company.first
+rappi.logo.attach(io: File.open("db/db_companylogo/01_rappi_logo_100x100.png"), filename: "01_rappi_logo_100x100.png")
+
+mef = Company.find(4)
+mef.logo.attach(io: File.open("db/db_companylogo/04_mef_logo_100x100.jpg"), filename: "04_mef_logo_100x100.jpg")
+
+bcp = Company.find(10)
+bcp.logo.attach(io: File.open("db/db_companylogo/10_bcp_logo_100x100.png"), filename: "10_bcp_logo_100x100.png")
