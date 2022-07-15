@@ -3,4 +3,5 @@ class Category < ApplicationRecord
   has_many :jobs, dependent: :nullify
 
   # Validations
+  validates :name, presence: true
 end
