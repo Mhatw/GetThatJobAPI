@@ -181,6 +181,13 @@ type = Type.create([
   {name:"internship"},
 ])
 
+statuses = Status.create([
+  {name: "Waiting"},
+  {name: "In progress"},
+  {name: "Finished"},
+  {name: "Declined"}
+])
+
 job = Job.create([
   {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
   {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
