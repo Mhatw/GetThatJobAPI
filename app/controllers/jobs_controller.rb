@@ -65,8 +65,13 @@ class JobsController < ApplicationController
   end
 
   def add_company_data(jobs)
-    jobs.map do |job| 
-      { job: job, company: job.company }
+    jobs.map do |job|
+      if job.company.logo.attached?
+        company = job.company.as_json(only: :name).merge(logo_path: url_for(job.company.logo))
+        job.as_json.merge(company: company)
+      else
+        job.as_json.merge(company: job.company)
+      end
     end
   end
 end
