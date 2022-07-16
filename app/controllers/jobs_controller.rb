@@ -8,7 +8,7 @@ class JobsController < ApplicationController
 
   def index_reloaded
     if current_user.userable_type == "Professional"
-      @jobs = reload_data_proffesinals(Job.all)
+      @jobs = reload_data_professionals(Job.all)
     else
       @jobs = reload_data_companies(current_user.userable.jobs)
     end
@@ -68,7 +68,7 @@ class JobsController < ApplicationController
     end
   end
 
-  def reload_data_proffesinals(jobs)
+  def reload_data_professionals(jobs)
     jobs.map do |job|
       {
         id: job.id,
