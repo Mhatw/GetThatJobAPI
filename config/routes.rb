@@ -16,8 +16,10 @@ Rails.application.routes.draw do
   resources :types
 
   resources :jobs
+
+  get "/reloaded_jobs" => "jobs#index_reloaded"
+
   resources :applications
 
   resources :statuses, only: %i[index create]
-
 end
