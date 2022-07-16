@@ -2,12 +2,16 @@ class JobsController < ApplicationController
   before_action :set_job, only: %i[show update destroy]
 
   def index
+    @jobs = current_user.userable_type == "Professional" ? Job.all : current_user.userable.jobs
+    render json: @jobs
+  end
+
+  def index_reloaded
     if current_user.userable_type == "Professional"
-      @jobs = add_company_data(Job.all)
+      @jobs = reload_data_professionals(Job.all)
     else
-      @jobs = current_user.userable.jobs
+      @jobs = reload_data_companies(current_user.userable.jobs)
     end
-    # @jobs = current_user.userable_type == "Professional" ? Job.all : current_user.userable.jobs
     render json: @jobs
   end
 
@@ -64,14 +68,33 @@ class JobsController < ApplicationController
     end
   end
 
-  def add_company_data(jobs)
+  def reload_data_professionals(jobs)
     jobs.map do |job|
-      if job.company.logo.attached?
-        company = job.company.as_json(only: :name).merge(logo_path: url_for(job.company.logo))
-        job.as_json.merge(company: company)
-      else
-        job.as_json.merge(company: job.company)
-      end
+      {
+        id: job.id,
+        name: job.name,
+        description: job.description,
+        category: job.category.name,
+        type: job.type.name,
+        salary_min: job.salary_min,
+        salary_max: job.salary_max,
+        company: job.company
+      }
+    end
+  end
+
+  def reload_data_companies(jobs)
+    jobs.map do |job|
+      {
+        id: job.id,
+        name: job.name,
+        description: job.description,
+        category: job.category.name,
+        type: job.type.name,
+        salary_min: job.salary_min,
+        salary_max: job.salary_max,
+        applications: job.applications
+      }
     end
   end
 end
