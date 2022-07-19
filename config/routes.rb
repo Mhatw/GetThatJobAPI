@@ -22,4 +22,6 @@ Rails.application.routes.draw do
   resources :applications
 
   resources :statuses, only: %i[index create]
+
+  resource :profile, only: %i[show], controller: :users
 end

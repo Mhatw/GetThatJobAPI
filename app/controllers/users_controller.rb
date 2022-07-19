@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
   skip_before_action :authorize, only: :create
 
+  def show
+    data_user = current_user.userable.as_json.merge(email: current_user.email)
+    render json: data_user
+  end
+
   def create
     userable = Company.find(params[:company_id]) if params[:company_id]
     userable = Professional.find(params[:professional_id]) if params[:professional_id]
