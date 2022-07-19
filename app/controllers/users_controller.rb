@@ -2,7 +2,8 @@ class UsersController < ApplicationController
   skip_before_action :authorize, only: :create
 
   def show
-    data_user = current_user.userable.as_json.merge(email: current_user.email)
+    type_user = current_user.userable_type
+    data_user = current_user.userable.as_json.merge(email: current_user.email, type_user:)
     render json: data_user
   end
 
