@@ -78,7 +78,8 @@ class JobsController < ApplicationController
         type: job.type.name,
         salary_min: job.salary_min,
         salary_max: job.salary_max,
-        company: job.company
+        company: job.company,
+        logo_url: url_for(job.company.logo)
       }
     end
   end
@@ -93,8 +94,7 @@ class JobsController < ApplicationController
         type: job.type.name,
         salary_min: job.salary_min,
         salary_max: job.salary_max,
-        applications: job.applications,
-        logo_url: url_for(current_user.userable.logo)
+        applications: job.applications
       }
     end
   end
