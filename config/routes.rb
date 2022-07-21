@@ -15,8 +15,9 @@ Rails.application.routes.draw do
 
   resources :types
 
-  resources :jobs
-
+  resources :jobs do
+    resources :applications
+  end
   get "/reloaded_jobs" => "jobs#index_reloaded"
 
   resources :applications
