@@ -1,19 +1,20 @@
 class ApplicationsController < ApplicationController
-  before_action :set_application, only: %i[show update destroy]
+  before_action :set_application, only: %i[update destroy]
 
   def index
-    @applications = current_user.userable.applications
+    @applications = current_user.userable_type == "Company" ? applications_job : current_user.userable.applications
     render json: @applications
   end
 
   def show
-    @application = current_user.userable.applications.find(params[:id])
+    @application = current_user.userable_type == "Professional" ? application_professional : application_company
     render json: @application
   end
 
   def create
     @application = Application.new(application_params)
     @application.professional = current_user.userable
+
 
     if @application.save
       render json: @application, status: :created
@@ -42,5 +43,23 @@ class ApplicationsController < ApplicationController
 
   def application_params
     params.require(:application).permit(:follow, :message, :job_id, :professional_id, :status_id)
+  end
+
+  def applications_job
+    current_user.userable.jobs.find(params[:job_id]).applications
+  end
+
+  def application_professional
+    current_user.userable.applications.find(params[:id])
+  end
+
+  def application_company
+    job = Job.find(params[:job_id])
+    status_id = current_user.userable.jobs.find(params[:job_id]).applications.find(params[:id]).status_id 
+    status = Status.find(status_id)
+    professional_id = current_user.userable.jobs.find(params[:job_id]).applications.find(params[:id]).professional_id
+    professional = Professional.find(professional_id)
+
+    current_user.userable.jobs.find(params[:job_id]).applications.find(params[:id]).as_json.merge(job:, status:, professional:)
   end
 end
