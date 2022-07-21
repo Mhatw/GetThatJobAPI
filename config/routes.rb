@@ -15,7 +15,9 @@ Rails.application.routes.draw do
 
   resources :types
 
-  resources :jobs
+  resources :jobs do
+    resources :requirements, only: %i[index create]
+  end
 
   get "/reloaded_jobs" => "jobs#index_reloaded"
 
@@ -24,4 +26,5 @@ Rails.application.routes.draw do
   resources :statuses, only: %i[index create]
 
   resource :profile, only: %i[show], controller: :users
+
 end
