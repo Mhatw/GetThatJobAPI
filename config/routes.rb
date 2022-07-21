@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :types
 
   resources :jobs do
+    resources :applications
     resources :requirements, only: %i[index create]
   end
 

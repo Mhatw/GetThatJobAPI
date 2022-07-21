@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def show
     type_user = current_user.userable_type
-    data_user = current_user.userable.as_json.merge(email: current_user.email, type_user:)
+    data_user = type_user == "Professional" ? set_professional(type_user) : set_company(type_user)
     render json: data_user
   end
 
@@ -28,6 +28,15 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def set_professional(type_user)
+    profession = current_user.userable.profession
+    @data_professional = current_user.userable.as_json.merge(email: current_user.email, type_user:, profession:)
+  end
+
+  def set_company(type_user)
+    @data_company = current_user.userable.as_json.merge(email: current_user.email, type_user:)
+  end
 
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation)
