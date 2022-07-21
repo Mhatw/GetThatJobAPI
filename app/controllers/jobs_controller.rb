@@ -94,7 +94,10 @@ class JobsController < ApplicationController
         type: job.type.name,
         salary_min: job.salary_min,
         salary_max: job.salary_max,
-        applications: job.applications
+        created_at: job.created_at,
+        applications: job.applications,
+        mandatory_requirements: job.requirements.select(&:mandatory),
+        optional_requirements: job.requirements.reject(&:mandatory)
       }
     end
   end
