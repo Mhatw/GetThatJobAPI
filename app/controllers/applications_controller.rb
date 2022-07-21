@@ -2,7 +2,7 @@ class ApplicationsController < ApplicationController
   before_action :set_application, only: %i[update destroy]
 
   def index
-    @applications = current_user.userable_type == "Company" ? applications_job : current_user.userable.applications
+    @applications = current_user.userable_type == "Company" ? applications_companies : current_user.userable.applications
     render json: @applications
   end
 
@@ -45,12 +45,22 @@ class ApplicationsController < ApplicationController
     params.require(:application).permit(:follow, :message, :job_id, :professional_id, :status_id)
   end
 
-  def applications_job
+  # to index
+
+  def applications_companies
     current_user.userable.jobs.find(params[:job_id]).applications
   end
 
+  # to show
+
   def application_professional
-    current_user.userable.applications.find(params[:id])
+    job_id = current_user.userable.applications.find(params[:id]).job_id
+    job = Job.find(job_id)
+    professional_id = current_user.userable.applications.find(params[:id]).professional_id
+    professional = Professional.find(professional_id)
+    status_id = current_user.userable.applications.find(params[:id]).status_id
+    status = Status.find(status_id)
+    current_user.userable.applications.find(params[:id]).as_json.merge(job:, professional:, status:)
   end
 
   def application_company
