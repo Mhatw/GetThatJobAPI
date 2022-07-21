@@ -78,8 +78,11 @@ class JobsController < ApplicationController
         type: job.type.name,
         salary_min: job.salary_min,
         salary_max: job.salary_max,
+        created_at: job.created_at,
         company: job.company,
-        logo_url: url_for(job.company.logo)
+        logo_url: url_for(job.company.logo),
+        mandatory_requirements: job.requirements.select(&:mandatory),
+        optional_requirements: job.requirements.reject(&:mandatory)
       }
     end
   end
