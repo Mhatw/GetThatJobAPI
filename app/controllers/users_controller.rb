@@ -2,8 +2,8 @@ class UsersController < ApplicationController
   skip_before_action :authorize, only: :create
 
   def show
-    type_user = current_user.userable_type
-    data_user = type_user == "Professional" ? set_professional(type_user) : set_company(type_user)
+    user_type = current_user.userable_type
+    data_user = user_type == "Professional" ? set_professional(user_type) : set_company(user_type)
     render json: data_user
   end
 
@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
     user = User.new(user_params)
     user.userable = userable
-    
+
     if user.save
       render json: {
         token: user.token,
@@ -29,13 +29,13 @@ class UsersController < ApplicationController
 
   private
 
-  def set_professional(type_user)
+  def set_professional(user_type)
     profession = current_user.userable.profession
-    @data_professional = current_user.userable.as_json.merge(email: current_user.email, type_user:, profession:)
+    @data_professional = current_user.userable.as_json.merge(email: current_user.email, user_type:, profession:)
   end
 
-  def set_company(type_user)
-    @data_company = current_user.userable.as_json.merge(email: current_user.email, type_user:)
+  def set_company(user_type)
+    @data_company = current_user.userable.as_json.merge(email: current_user.email, user_type:, logo_url: url_for(current_user.userable.logo))
   end
 
   def user_params

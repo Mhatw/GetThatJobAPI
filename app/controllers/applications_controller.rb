@@ -44,7 +44,7 @@ class ApplicationsController < ApplicationController
   end
 
   def application_params
-    params.require(:application).permit(:follow, :message, :job_id, :professional_id, :status_id, :experience)
+    params.require(:application).permit(:follow, :message, :job_id, :professional_id, :status_id, :cv, :experience)
   end
 
   # to index
