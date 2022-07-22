@@ -35,7 +35,7 @@ class UsersController < ApplicationController
   end
 
   def set_company(user_type)
-    @data_company = current_user.userable.as_json.merge(email: current_user.email, user_type:)
+    @data_company = current_user.userable.as_json.merge(email: current_user.email, user_type:, logo_url: url_for(current_user.userable.logo))
   end
 
   def user_params
