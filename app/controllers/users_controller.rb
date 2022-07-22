@@ -31,11 +31,11 @@ class UsersController < ApplicationController
 
   def set_professional(user_type)
     profession = current_user.userable.profession
-    @data_professional = current_user.userable.as_json.merge(email: current_user.email, user_type:, profession:)
+    @data_professional = current_user.userable.as_json.merge(email: current_user.email, user_type:, profession:, user_id: current_user.id)
   end
 
   def set_company(user_type)
-    @data_company = current_user.userable.as_json.merge(email: current_user.email, user_type:, logo_url: url_for(current_user.userable.logo))
+    @data_company = current_user.userable.as_json.merge(email: current_user.email, user_type:, logo_url: url_for(current_user.userable.logo), user_id: current_user.id)
   end
 
   def user_params
