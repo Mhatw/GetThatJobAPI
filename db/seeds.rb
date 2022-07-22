@@ -220,23 +220,266 @@ statuses = Status.create([
 ])
 
 job = Job.create([
-  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
-  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
-  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
-  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
-  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
-  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
-  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
-  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
-  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
-  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
-  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
-  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
-  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
-  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
-  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
-  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)}
-])
+  {name:"Full-stack Developer",#01
+    description:"Design, develop and debug internet-facing applications to company and industry standards of quality and security.
+    Perform code peer reviews and participate in technical discussions.
+    Work within Agile Scrum Framework and contribute to all Agile ceremonies.",
+    salary_min: 900,
+    salary_max: 2500,
+    type_id:1,
+    company_id:5,
+    category_id:8},
+  
+    {name:"Ruby on Rails Developer",#02
+    description:"We're looking to hire several mid-level and senior Ruby on Rails developers to join our team. You'll work with our incredible clients in one of two ways:
+    Team Augmentation / Staffing: You will integrate yourself directly into our client's team and work alongside their existing designers and engineers on a daily basis.
+    Design & Build: You will work on a FullStack Labs product team to build and deliver a product to our clients.",
+    salary_min: 1200,
+    salary_max: 2000,
+    type_id:4,
+    company_id:3,
+    category_id:8},
+  
+    {name:"Portuguese Teacher",#03
+    description:"To motivate each pupil to develop competencies, knowledge, and skills in aurally comprehending, speaking, reading and writing the Portuguese language in accordance with each pupil's ability; to interpret to pupils the culture of the countries where Portuguese is spoken; to discover and develop special talents of pupils in Portuguese communication.",
+    salary_min: 1000,
+    salary_max: 1500,
+    type_id:3,
+    company_id:15,
+    category_id:2},
+    
+    {name:"SAP ABAP Developer",#04
+    description:"- This position is 100% remote
+    - Looking for around 3 to 5 years experience
+    - Work will include projects, enhancements, and support
+    - Excellent Communication Skills Required
+    
+    As an SAP ABAP Developer you will:
+    - Work directly with project teams to provide remote ABAP technical support and development of enhancements
+    - Analyze business requirements, review existing systems, define the solution, and translate that into detailed programming designs.
+    - Collaborate with clients and teams to deliver solutions and constantly improve the quality of deliverables.
+    - Articulate ideas and solutions to technical and non-technical audiences verbally and in writing",
+    salary_min: 1500,
+    salary_max: 2200,
+    type_id:4,
+    company_id:11,
+    category_id:8},
+  
+    {name:"Backend Software Developer (Golang)",#05
+    description:"We are looking for technically very strong candidates, with a strong understanding of computer systems. We want people who love designing and building infrastructure components and large complex services. We are looking for engineers driven by a passion to create applications systems that can redefine the contact center communication space.",
+    salary_min: 1800,
+    salary_max: 2500,
+    type_id:4,
+    company_id:2,
+    category_id:8},
+  
+    {name:"Business Intelligence Analyst",#06
+    description:"The Business Intelligence Analyst will be a member of the Enterprise Analytics team and be responsible for the design, implementation and maintenance of self service business intelligence portals, dashboards, and other associated reporting platforms.
+    This person is responsible for implementing and maintaining reporting and business intelligence solutions to support all necessary divisions.",
+    salary_min: 900,
+    salary_max: 1400,
+    type_id:1,
+    company_id:3,
+    category_id:8},
+  
+    {name:"Data Scientist",#07
+    description:"We are seeking a full-time Data Engineer to join our Analytics Team. Ideal candidates must be creative self-starters with a solid first-principles data engineering skillset in R, Python, SQL, and data warehouses such as Snowflake. They will work closely with a multi-disciplinary team including engineers, developers, and finance professionals to build and deploy Energia’s proprietary analytics software platform.",
+    salary_min: 2000,
+    salary_max: 2800,
+    type_id:1,
+    company_id:8,
+    category_id:4},
+  
+    {name:"Financial Analyst",#08
+    description:"We are currently seeking an enthusiastic, motivated and talented individual for the position of Financial Analyst for our team. The incumbent of this position will provide monthly financial deck, sales analysis, SG&A (marketing, sales, warehousing, freight) review, Cross Functional Finance Support, System and Data support.",
+    salary_min: 1500,
+    salary_max: 2200,
+    type_id:1,
+    company_id:4,
+    category_id:6},
+  
+    {name:"UX/UI Designer",#09
+    description:"The candidate will possess a strong grasp of logical content modelling and managing website content in a scalable manner. We are migrating our content to Contentstack CMS and will value candidates who have experience with this or similar solutions. The candidate will have an eye for clean and artful design, possess superior UI knowledge, and be able to translate high-level requirements into effective design artifacts, such as task flows, wireframes, and prototypes.",
+    salary_min:1000,
+    salary_max:1800,
+    type_id:1,
+    company_id:9,
+    category_id:8},
+  
+    {name:"Associate Attorney",#10
+    description:"We are looking for candidates with 3+ years of experience in any area and are comfortable handling a high load of cases. Very importantly, other than just finding someone with the right experience, we want someone who is genuinely interested in professional development.",
+    salary_min: 1500,
+    salary_max: 2500,
+    type_id:1,
+    company_id:13,
+    category_id:3},
+  
+    {name:"Product Owner",#11
+    description:"As a member of our team, we provide you with valuable opportunities to broaden your experience and maximize your potential. We ensure our staff are equipped to excel today and tomorrow by leveraging state-of-the-art technologies and modern working environments, encouraging open dialogue and professional debate, and collaborating with world-class talent and institutions around the globe. We believe in rewarding those who do rewarding work and are committed to providing careers that can help turn the tide of serious, life-interrupting illnesses.",
+    salary_min: 1800,
+    salary_max: 2200,
+    type_id:1,
+    company_id:9,
+    category_id:8},
+  
+    {name:"Demand Planner",#12
+    description:"The Demand Planner is responsible for contributing to the profit and growth of the Wholesale division by managing/creating forecast for supply planning. 
+    The main functions include creating demand plans at the brand/SKU level, performing data analysis, and producing metrics reports that leads to sound and effective decision making. 
+    The function ensures consistent service levels to our customers through developing accurate forecasts, tracking their results, and maintaining efficient inventory levels to cover demand. 
+    Liaises with Sales teams, Product, Customer Service, Corporate Planning and other cross functional groups to achieve collaboration and consensus and high level of service level to our customers.",
+    salary_min: 1500,
+    salary_max: 2200,
+    type_id:1,
+    company_id:14,
+    category_id:9},
+  
+    {name:"Sales Specialist",#13
+    description:"The Sales Specialist role is responsible for analyzing market trends, identifying opportunities, and liaising with Sales and Commercial stakeholders to optimize performance. They will monitor and manage performance for a specific cluster, coordinate action implementation within assigned Sales channels, and support the APAC Sales Development team with relevant reporting & analysis on accounts performance.",
+    salary_min: 500,
+    salary_max: 800,
+    type_id:1,
+    company_id:14,
+    category_id:5},
+  
+    {name:"Supply Chain Manager",#14
+    description:"Manages and analyzes single site or moderate risk supply chain activities. Develops single level supply chain business models to achieve improvements within business processes, demand planning, capacity mgmt. inventory mgmt or logistics costs. Makes strategic decisions under time constraints. Provides input for developing supply chain processes and procedures. Requires a high level of strategic thinking versus limited tactical execution.",
+    salary_min: 1800,
+    salary_max: 2300,
+    type_id:1,
+    company_id:12,
+    category_id:10},
+  
+    {name:"Key Account Manager",#15
+    description:"As a Key Account Manager, you will be responsible for the sales results of an assigned book of business within a defined territory. Your customers will be large, complex accounts. You will be strategic in your approach, using information and data to help you gain a solid understanding of your accounts and the opportunities to pursue. You will grow sales and profitability by securing contractual commitments from generalist.",
+    salary_min: 1000,
+    salary_max: 1500,
+    type_id:1,
+    company_id:14,
+    category_id:5},
+  
+    {name:"Tax Accountant",#16
+    description:"We are looking for an energetic and self-motivated individual to join our Finance team. We are a goal-oriented team that works hard and enjoys the incredible trajectory that Qualtrics provides. This is a job for a well-spoken, hard-working, self-starting individual with excellent social skills.",
+    salary_min: 1500,
+    salary_max: 2000,
+    type_id:1,
+    company_id:10,
+    category_id:1},
+  
+  
+    {name:"Buyer Assistant",#17
+    description:"The Buyer Assistant will execute day-to-day tasks necessary to assist the Buying team. The Buyer Assistant will also obtain a general understanding of all Buying functions, including interdependencies with Production, Planning and Distribution, participating in departmental meetings and becoming familiar with buying tools, terminology and responsibilities.",
+    salary_min: 500,
+    salary_max: 700,
+    type_id:1,
+    company_id:12,
+    category_id:10},
+  
+    {name:"Transport Analyst",#18
+    description:"This position performs difficult professional work analyzing transportation and traffic operations related issues. Under supervision of the Assistant Traffic Engineer, responsibilities include review and comment on Maintenance of Traffic (MOT) plans, site plans, engineering and construction plans, and supervises the maintenance of traffic operations within the City. May be assigned additional roles such as Multi Modal/Transit Coordinator, Bike Coordinator/Resident Relations, or Transportation Operations.",
+    salary_min: 900,
+    salary_max: 1200,
+    type_id:1,
+    company_id:7,
+    category_id:4},
+  
+    {name:"Production Operator",#19
+    description:"We are looking for Team Members who want to be part of achieving our mission to provide our customers the highest quality most affordable consumer goods ",
+    salary_min: 300,
+    salary_max: 550,
+    type_id:1,
+    company_id:12,
+    category_id:7},
+  
+  
+    {name:"Logistic Operator",#20
+    description:"As a Logistics Operator you will be responsible for working in a team environment in supporting the materials operation of a refrigeration manufacturing organization. This position will work in a climate controlled, manufacturing environment. This position works Monday – Thursday, ten hours a day with occasional overtime.",
+    salary_min: 300,
+    salary_max: 550,
+    type_id:1,
+    company_id:6,
+    category_id:9},
+  
+  
+    {name:"Health & Safety Supervisor",#21
+    description:"The Safety and Health Supervisor will ensure that COVID-19 requirements are implemented on-set working in conjunction with the Manager, Health & Safety, UPM and other department heads. The individual will report to the Manager, Health & Safety.",
+    salary_min: 1000,
+    salary_max: 1300,
+    type_id:1,
+    company_id:7,
+    category_id:4},
+  
+    {name:"Heavy Equipment Shop Technician",#22
+    description:"If you are ready for an exciting and rewarding career path with opportunities for training and unlimited earning potential and growth, then this is the ideal opportunity for you!
+    As a Heavy Equipment Shop Technician you will be responsible for perform diagnostic inspections as directed as well as recondition and repair equipment and components",
+    salary_min: 900,
+    salary_max: 1200,
+    type_id:1,
+    company_id:8,
+    category_id:4},
+  
+  
+    {name:"Delivery Driver",#23
+    description:"As a Delivery Driver, you will transport products safely and deliver office supplies on your assigned route to customers. At times, depending on volume, you will load your truck.
+    Safety is our utmost priority so, in this role, we will look to you to ensure safe work practices and embrace and foster our safety culture.",
+    salary_min: 800,
+    salary_max: 1100,
+    type_id:1,
+    company_id:6,
+    category_id:9},
+  
+    {name:"Quality Control Chemist",#24
+    description:"The Quality Control Chemist, will provide expertise with all daily operations in quality control laboratories. In this role, you will support the buildup and maintenance of the rapid technology platform by providing reliable accurate analytical figures as well as perform validation and troubleshooting of new analytical methods to ensure they meet the requirements and deadlines.",
+    salary_min: 1000,
+    salary_max: 1400,
+    type_id:1,
+    company_id:12,
+    category_id:7},
+  
+    {name:"Interior Designer Architect",#25
+    description:"We are currently seeking an Interior Designer/Architect with 3+ years of experience, with a combination of creativity and technical knowledge, adept at developing concepts and assisting the design team on a wide range of residential projects. The interior designer will work with and report to the Project Interior Designer to generate and carry out design concepts, helping take projects from storyboard to completion.",
+    salary_min: 1000,
+    salary_max: 1400,
+    type_id:1,
+    company_id:6,
+    category_id:9},
+  
+  
+    {name:"Bank Cashier",#26
+    description:"The Cashier works primarily in the retail operation, handling cash and credit transactions. Their main function is to accurately operate the cash register/POS and complete the transactions. Provides support to the retail operation, including setup, maintaining supplies and products, and assisting in cleanup and closedown. ",
+    salary_min: 600,
+    salary_max: 900,
+    type_id:1,
+    company_id:10,
+    category_id:1},
+  
+    {name:"Rock Truck Operator",#27
+    description:"As a Rock Truck Operator, you will help in the production of natural aggregates in a dredge mining environment.
+    Duties and responsibilities include the following: operating digger derrick trucks and hydraulic equipment; responsible for safety of Lineworker while in bucket; assisting in moving wire; assisting in hooking up house services; setting up materials for Lineworkers",
+    salary_min: 1000,
+    salary_max: 1500,
+    type_id:1,
+    company_id:8,
+    category_id:4}
+  ])
+
+
+  # {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  # {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  # {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  # {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  # {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  # {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  # {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  # {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  # {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  # {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  # {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  # {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  # {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  # {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  # {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  # {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)}
+  #])
 
 #user = User.create
 user = User.create([

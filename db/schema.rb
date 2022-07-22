@@ -49,6 +49,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_22_071448) do
     t.bigint "status_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "experience"
     t.index ["job_id", "professional_id"], name: "index_applications_on_job_id_and_professional_id", unique: true
     t.index ["job_id"], name: "index_applications_on_job_id"
     t.index ["professional_id"], name: "index_applications_on_professional_id"
