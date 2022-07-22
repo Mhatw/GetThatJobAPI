@@ -30,7 +30,7 @@ companies = Company.create([ #company es el modelo (es como una clase en Ruby) -
   {name:"Tekton Labs", #05 - Technology
   website:"https://www.tektonlabs.com" ,
   #logo: ,
-  description:"We design and develop digital products that create meaningful experiences for users worldwide. We are commited to helping businesses grow and improve people’s lives through technology"},
+  description:"We are a US software development company delivering high-quality, cost-effective custom application development to clients worldwide. As a technology consulting company, we also help our clients with their digital transformation process."},
 
   {name:"Falabella Peru", #06 - Retail
   website: "https://www.falabella.com/falabella-cl/page/Indice-empresa",
@@ -133,62 +133,249 @@ profession = Profession.create([
 professional = Professional.create([
   {name:"Alex Mamani Hallasi", phone: 928898635, birth_date:"21/04/1996", linkedin_url:"https://www.linkedin.com/in/alexmamanihallasi", experience:"", education:"Codeable", profession_id:1},
   {name:"Alexis Parave Vargas", phone: 959873639, birth_date:"21/08/1997", linkedin_url:"https://www.linkedin.com/in/alexis-parave", experience:"", education:"Codeable", profession_id:2},
-  {name:"Anthony Sanchez Yupanqui", phone: 918822791, birth_date:"20/02/1994", linkedin_url:"https://www.linkedin.com/in/anthony-stewardt-sanchez-yupanqui-62751b1b5", experience:"", education:"Codeable", profession_id:3},
+  {name:"Anthony Sanchez Yupanqui", phone: 918822791, birth_date:"20/10/1994", linkedin_url:"https://www.linkedin.com/in/anthony-stewardt-sanchez-yupanqui-62751b1b5", experience:"", education:"Codeable", profession_id:3},
   {name:"Arianna Avalos", phone: 922238188, birth_date:"16/03/1992", linkedin_url:"https://www.linkedin.com/in/arianna-avalos-a6a38b224", experience:"", education:"Codeable", profession_id:4},
   {name:"César Gavino Torres", phone: 941496250, birth_date:"20/02/1993", linkedin_url:"https://www.linkedin.com/in/cesargavinotorres", experience:"", education:"Codeable", profession_id:5},
   {name:"César Martínez Vargas Chacón", phone: 994417421, birth_date:"30/04/1996", linkedin_url:"https://www.linkedin.com/in/cesarmartinezvargas", experience:"", education:"Codeable", profession_id:6},
   {name:"Cristian Espinoza Alburqueque", phone: 959420261, birth_date:"25/07/1996", linkedin_url:"https://www.linkedin.com/in/mhatw", experience:"", education:"Codeable", profession_id:7},
-  {name:"Dave Mamani", phone: 999999999, birth_date:"20/02/1993", linkedin_url:"", experience:"", education:"Codeable", profession_id:8},
+  {name:"Dave Mamani", phone: 999999999, birth_date:"05/11/1993", linkedin_url:"", experience:"", education:"Codeable", profession_id:8},
   {name:"Dennis Nahuamel", phone: 921044451, birth_date:"20/02/1993", linkedin_url:"https://www.linkedin.com/in/denis-nahuamel", experience:"", education:"Codeable", profession_id:9},
   {name:"Diego Manrique Machaca", phone: 950028762, birth_date:"11/02/1993", linkedin_url:"https://www.linkedin.com/in/diego-manrique-machaca", experience:"", education:"Codeable", profession_id:10},
-  {name:"Eduardo Calachua Soto", phone: 928133695, birth_date:"05/02/1993", linkedin_url:"https://www.linkedin.com/in/eduardocalachua", experience:"", education:"Codeable", profession_id:11},
-  {name:"Enmanuel Chipana Araujo", phone: 952305248, birth_date:"20/02/1993", linkedin_url:"https://www.linkedin.com/in/enmanuel-chipana-araujo-44aa5a226", experience:"", education:"Codeable", profession_id:12},
+  {name:"Eduardo Calachua Soto", phone: 928133695, birth_date:"05/09/1996", linkedin_url:"https://www.linkedin.com/in/eduardocalachua", experience:"", education:"Codeable", profession_id:11},
+  {name:"Enmanuel Chipana Araujo", phone: 952305248, birth_date:"09/08/2004", linkedin_url:"https://www.linkedin.com/in/enmanuel-chipana-araujo-44aa5a226", experience:"", education:"Codeable", profession_id:12},
   {name:"Enrique Vizarra Matta", phone: 931276162, birth_date:"12/02/1993", linkedin_url:"https://www.linkedin.com/in/vizarra-matta-enrique", experience:"", education:"Codeable", profession_id:13},
   {name:"Fabio Fiestas Cobeñas", phone: 961032467, birth_date:"04/05/2000", linkedin_url:"https://www.linkedin.com/in/fabio-fiestas", experience:"", education:"Codeable", profession_id:14},
-  {name:"Frank Cano de la Cruz", phone: 951898635, birth_date:"20/02/1993", linkedin_url:"https://www.linkedin.com/in/frank-cano-dlc", experience:"", education:"Codeable", profession_id:15},
+  {name:"Frank Cano de la Cruz", phone: 951898635, birth_date:"10/07/2002", linkedin_url:"https://www.linkedin.com/in/frank-cano-dlc", experience:"", education:"Codeable", profession_id:15},
   {name:"Gabriel Flores", phone: 992801773, birth_date:"22/10/1996", linkedin_url:"https://www.linkedin.com/in/dev-gabriel-flores", experience:"", education:"Codeable", profession_id:16},
-  {name:"Guillermo De Regil", phone: 941496250, birth_date:"20/02/1993", linkedin_url:"https://www.linkedin.com/in/guillermo-de-regil-mu%C3%B1oz", experience:"", education:"Codeable", profession_id:17},
+  {name:"Guillermo De Regil", phone: 941496250, birth_date:"23/12/1992", linkedin_url:"https://www.linkedin.com/in/guillermo-de-regil-mu%C3%B1oz", experience:"", education:"Codeable", profession_id:17},
   {name:"Johan Segura", phone: 945566678, birth_date:"07/09/2001", linkedin_url:"https://www.linkedin.com/in/johan-segura/", experience:"", education:"Codeable", profession_id:18},
   {name:"Julio Bazalar Zuloaga", phone: 964015494, birth_date:"20/02/1993", linkedin_url:"https://www.linkedin.com/in/jbzuloaga", experience:"", education:"Codeable", profession_id:19},
   {name:"Kevin López", phone: 988241641, birth_date:"26/06/1993", linkedin_url:"https://www.linkedin.com/in/kevin-lopez-full-stack", experience:"", education:"Codeable", profession_id:20},
   {name:"Luis Zelada Castrejón", phone: 961517470, birth_date:"19/02/1999", linkedin_url:"https://www.linkedin.com/in/luis-zelada", experience:"", education:"Codeable", profession_id:21},
-  {name:"Manuel Aguilar", phone: 966321264, birth_date:"20/02/1993", linkedin_url:"https://www.linkedin.com/in/manumaxaguilar", experience:"", education:"Codeable", profession_id:22},
-  {name:"Marco Ramírez", phone: 963567202, birth_date:"20/02/1993", linkedin_url:"", experience:"", education:"Codeable", profession_id:23},
-  {name:"Mario Munaylla Aguirre", phone: 987732189, birth_date:"20/02/1993", linkedin_url:"https://www.linkedin.com/in/mario-munaylla", experience:"", education:"Codeable", profession_id:24},
+  {name:"Manuel Aguilar", phone: 966321264, birth_date:"17/04/2000", linkedin_url:"https://www.linkedin.com/in/manumaxaguilar", experience:"", education:"Codeable", profession_id:22},
+  {name:"Marco Ramírez", phone: 963567202, birth_date:"04/05/2001", linkedin_url:"", experience:"", education:"Codeable", profession_id:23},
+  {name:"Mario Munaylla Aguirre", phone: 987732189, birth_date:"29/01/1993", linkedin_url:"https://www.linkedin.com/in/mario-munaylla", experience:"", education:"Codeable", profession_id:24},
   {name:"Martin Ubillus Escobar", phone: 986853315, birth_date:"01/12/1990", linkedin_url:"https://www.linkedin.com/in/martin-u-3568171b", experience:"", education:"Codeable", profession_id:25},
-  {name:"Raul Heredia", phone: 999999999, birth_date:"20/02/1993", linkedin_url:"https://www.linkedin.com/in/lheredias/", experience:"", education:"Codeable", profession_id:26},
-  {name:"Said Socla Morales", phone: 974135700, birth_date:"20/02/1993", linkedin_url:"https://www.linkedin.com/in/jhoksansocla", experience:"", education:"Codeable", profession_id:27},
-  {name:"Yhostin Ollachica Arias", phone: 931892562, birth_date:"20/02/1993", linkedin_url:"https://www.linkedin.com/in/yhostin-ollachica-arias", experience:"", education:"Codeable", profession_id:28},
+  {name:"Raul Heredia", phone: 999999999, birth_date:"12/05/1996", linkedin_url:"https://www.linkedin.com/in/lheredias/", experience:"", education:"Codeable", profession_id:26},
+  {name:"Said Socla Morales", phone: 974135700, birth_date:"29/03/1992", linkedin_url:"https://www.linkedin.com/in/jhoksansocla", experience:"", education:"Codeable", profession_id:27},
+  {name:"Yhostin Ollachica Arias", phone: 931892562, birth_date:"14/06/2000", linkedin_url:"https://www.linkedin.com/in/yhostin-ollachica-arias", experience:"", education:"Codeable", profession_id:28},
 ])
 
 categories = Category.create([
-  {name:"Banking"},
-  {name:"Education"},
-  {name:"Legal"},
-  {name:"Mining"},
-  {name:"Sales"},
-  {name:"Government"},
-  {name:"Manufacturing"},
-  {name:"Tech"},
-  {name:"Retail"},
-  {name:"Consumer Goods"},
+  {name:"Banking"},#01
+  {name:"Education"},#02
+  {name:"Legal"},#03
+  {name:"Mining"},#04
+  {name:"Sales"},#05
+  {name:"Government"},#06
+  {name:"Manufacturing"},#07
+  {name:"Tech"},#08
+  {name:"Retail"},#09
+  {name:"Consumer Goods"},#10
 ])
 
 type = Type.create([
-  {name:"full-time"},
-  {name:"part-time"},
-  {name:"freelance"},
-  {name:"remote"},
-  {name:"internship"},
+  {name:"full-time"},#01
+  {name:"part-time"},#02
+  {name:"freelance"},#03
+  {name:"remote"},#04
+  {name:"internship"},#05
 ])
 
 job = Job.create([
-  {name:"",
+  {name:"Full-stack Developer",#01
+  description:"Design, develop and debug internet-facing applications to company and industry standards of quality and security.
+  Perform code peer reviews and participate in technical discussions.
+  Work within Agile Scrum Framework and contribute to all Agile ceremonies.",
+  salary_min:"900",
+  salary_max:"2500",
+  type_id:1,
+  company_id:5,
+  category_id:8},
+
+  {name:"Ruby on Rails Developer",#02
   description:"",
-  salary_min:,
-  salary_max:,
+  salary_min:"",
+  salary_max:"",
   type_id:,
   company_id:,
-  category_id:,},
+  category_id:},
+
+  {name:"Portuguese Teacher",#03
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+  
+  {name:"SAP ABAP Developer",#04
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+
+  {name:"Backend Software Developer (Golang)",#05
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+
+  {name:"Business Intelligence Analyst",#06
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+
+  {name:"Data Scientist",#07
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+
+  {name:"Finance Analyst",#08
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+
+  {name:"UX/UI Designer",#09
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+
+  {name:"Associate Attorney",#10
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+
+  {name:"Product Owner",#11
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+
+  {name:"Demand Planner",#12
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+
+  {name:"Sales Specialist",#13
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+
+  {name:"",#14
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+
+  {name:"",#15
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+
+  {name:"",#16
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+
+
+  {name:"",#17
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+
+  {name:"",#18
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+
+  {name:"",#19
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+
+
+  {name:"",#20
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+
+
+  {name:"",#21
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+
+
+  {name:"",#22
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+
+
 ])
+
+
+
 #user = User.create
+
+
+application = Appilations.create([
+  {message: "",experience: "", job_id:,user_id:, application_id:1}
+  {message: "",experience: "", job_id:,user_id:, application_id:2}
+  {message: "",experience: "", job_id:,user_id:, application_id:3}
+  {message: "",experience: "", job_id:,user_id:, application_id:4}
+])
