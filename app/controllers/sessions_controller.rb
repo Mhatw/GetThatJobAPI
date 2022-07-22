@@ -3,6 +3,8 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(email: params[:email])
+    return respond_unauthorized("Incorrect type of user") unless user.userable_type == params[:user_type]
+
     if user&.authenticate(params[:password])
       user.regenerate_token
       render json: {
