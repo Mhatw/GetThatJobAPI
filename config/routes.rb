@@ -28,4 +28,5 @@ Rails.application.routes.draw do
 
   resource :profile, only: %i[show], controller: :users
 
+  resources :followings, only: %i[create destroy]
 end
