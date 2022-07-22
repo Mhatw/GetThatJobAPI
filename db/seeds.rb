@@ -241,8 +241,14 @@ job = Job.create([
 #user = User.create
 user = User.create([
   {email:"test@mail.com", password:"asdasd", password_confirmation:"asdasd", userable:Professional.first},
-  {email:"testero@mail.com", password:"asdasd", password_confirmation:"asdasd", userable:Professional.first},
-  {email:"testino@mail.com", password:"asdasd", password_confirmation:"asdasd", userable:Company.first}
+  {email:"test2@mail.com", password:"asdasd", password_confirmation:"asdasd", userable:Professional.find(2)},
+  {email:"test3@mail.com", password:"asdasd", password_confirmation:"asdasd", userable:Professional.find(3)},
+  {email:"test4@mail.com", password:"asdasd", password_confirmation:"asdasd", userable:Professional.find(4)},
+  {email:"test5@mail.com", password:"asdasd", password_confirmation:"asdasd", userable:Professional.find(5)},
+  {email:"test6@mail.com", password:"asdasd", password_confirmation:"asdasd", userable:Professional.find(6)},
+  {email:"test7@mail.com", password:"asdasd", password_confirmation:"asdasd", userable:Professional.find(2)},
+  {email:"testino@mail.com", password:"asdasd", password_confirmation:"asdasd", userable:Company.first},
+  {email:"testino2@mail.com", password:"asdasd", password_confirmation:"asdasd", userable:Professional.find(2)}
 ])
 
 
