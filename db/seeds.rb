@@ -100,6 +100,37 @@ companies = Company.create([ #company es el modelo (es como una clase en Ruby) -
   description:"Universidad del Pacífico was founded in 1962, within a context dominated by a continental debate over the model Latin America should follow toward development. The University has since been a key actor in the educational, economic and social growth of the country and the region. The language center was founded in 1993 and their main purpose is to develop in each of its students a high level of communicative competence in the language studied and make mastery of a foreign language a strategic ally to interact in a globalized world.​"},
   ])
 
+  rappi = Company.find(1)
+  rappi.logo.attach(io: File.open("db/db_companylogo/01_rappi_logo_100x100.png"), filename: "01_rappi_logo_100x100.png")
+  truora = Company.find(2)
+  truora.logo.attach(io: File.open("db/db_companylogo/02_truora_logo02_100x100.png"), filename: "02_truora_logo02_100x100.png")
+  globant = Company.find(3)
+  globant.logo.attach(io: File.open("db/db_companylogo/03_globant02_logo_100x100.png"), filename: "03_globant_logo02_100x100.png")
+  mef = Company.find(4)
+  mef.logo.attach(io: File.open("db/db_companylogo/04_mef_logo_100x100.jpg"), filename: "04_mef_logo_100x100.jpg")
+  tektonlabs = Company.find(5)
+  tektonlabs.logo.attach(io: File.open("db/db_companylogo/05_tektonlabs_logo_100x100.jpg"), filename: "05_tektonlabs_logo_100x100.jpg")
+  falabella = Company.find(6)
+  falabella.logo.attach(io: File.open("db/db_companylogo/06_falabella_logo_100x100.png"), filename: "06_falabella_logo_100x100.png")
+  lincuna = Company.find(7)
+  lincuna.logo.attach(io: File.open("db/db_companylogo/07_lincuna_logo02_100x100.png"), filename: "07_lincuna_logo02_100x100.png")
+  antamina = Company.find(8)
+  antamina.logo.attach(io: File.open("db/db_companylogo/08_antamina_logo_100x100.png"), filename: "08_antamina_logo_100x100.png")
+  niubiz = Company.find(9)
+  niubiz.logo.attach(io: File.open("db/db_companylogo/09_niubiz_logo_100x100.jpg"), filename: "09_niubiz_logo_100x100.jpg")
+  bcp = Company.find(10)
+  bcp.logo.attach(io: File.open("db/db_companylogo/10_bcp_logo_100x100.png"), filename: "10_bcp_logo_100x100.png")
+  ibm = Company.find(11)
+  ibm.logo.attach(io: File.open("db/db_companylogo/11_ibm_logo02_100x100.png"), filename: "11_ibm_logo02_100x100.png")
+  alicorp = Company.find(12)
+  alicorp.logo.attach(io: File.open("db/db_companylogo/12_alicorp_logo_100x100.png"), filename: "12_alicorp_logo_100x100.png")
+  rodelmed = Company.find(13)
+  rodelmed.logo.attach(io: File.open("db/db_companylogo/13_rodelmed_logo_100x100.jpg"), filename: "13_rodelmed_logo_100x100.jpg")
+  iqmedic = Company.find(14)
+  iqmedic.logo.attach(io: File.open("db/db_companylogo/14_iqmedic_logo02_100x100.png"), filename: "14_iqmedic_logo02_100x100.png")
+  cidup = Company.find(15)
+  cidup.logo.attach(io: File.open("db/db_companylogo/15_cidup_logo_100x100.png"), filename: "15_cidup_logo_100x100.png")
+
 profession = Profession.create([
   {name:"Full-stack Developer"}, #01
   {name:"Ruby on Rails Developer"}, #02
@@ -158,7 +189,6 @@ professional = Professional.create([
   {name:"Martin Ubillus Escobar", phone: 986853315, birth_date:"01/12/1990", linkedin_url:"https://www.linkedin.com/in/martin-u-3568171b", experience:"", education:"Codeable", profession_id:25},
   {name:"Raul Heredia", phone: 999999999, birth_date:"12/05/1996", linkedin_url:"https://www.linkedin.com/in/lheredias/", experience:"", education:"Codeable", profession_id:26},
   {name:"Said Socla Morales", phone: 974135700, birth_date:"29/03/1992", linkedin_url:"https://www.linkedin.com/in/jhoksansocla", experience:"", education:"Codeable", profession_id:27},
-  {name:"Yhostin Ollachica Arias", phone: 931892562, birth_date:"14/06/2000", linkedin_url:"https://www.linkedin.com/in/yhostin-ollachica-arias", experience:"", education:"Codeable", profession_id:28},
 ])
 
 categories = Category.create([
@@ -365,7 +395,30 @@ job = Job.create([
   company_id:,
   category_id:},
 
+  {name:"",#23
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
 
+  {name:"",#24
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
+
+
+  {name:"",#25
+  description:"",
+  salary_min:"",
+  salary_max:"",
+  type_id:,
+  company_id:,
+  category_id:},
 ])
 
 
