@@ -2,7 +2,7 @@ class ApplicationsController < ApplicationController
   before_action :set_application, only: %i[update destroy]
 
   def index
-    @applications = current_user.userable_type == "Company" ? applications_companies : current_user.userable.applications
+    @applications = current_user.userable_type == "Company" ? applications_companies : reload_applications(current_user.userable.applications)
     render json: @applications
   end
 
@@ -49,6 +49,22 @@ class ApplicationsController < ApplicationController
 
   def applications_companies
     current_user.userable.jobs.find(params[:job_id]).applications
+  end
+
+  def reload_applications(apps)
+    apps.map do |app|
+      {
+        id: app.id,
+        follow: app.follow,
+        job: app.job,
+        job_type: app.job.type.name,
+        job_company: app.job.company.name,
+        job_category: app.job.category.name,
+        professional: app.professional.name,
+        status: app.status.name,
+        created_at: app.created_at
+      }
+    end
   end
 
   # to show
