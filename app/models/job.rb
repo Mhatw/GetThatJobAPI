@@ -6,6 +6,8 @@ class Job < ApplicationRecord
   has_many :requirements, dependent: :destroy
   has_many :applications, dependent: :destroy
   has_many :professionals, through: :applications
+  has_many :followings, dependent: :destroy
+  # has_and_belongs_to_many :professionals
 
   # Validations
   validates :name, presence: true

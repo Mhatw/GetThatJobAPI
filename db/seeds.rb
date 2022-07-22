@@ -212,218 +212,246 @@ type = Type.create([
   {name:"internship"},#05
 ])
 
-job = Job.create([
-  {name:"Full-stack Developer",#01
-  description:"Design, develop and debug internet-facing applications to company and industry standards of quality and security.
-  Perform code peer reviews and participate in technical discussions.
-  Work within Agile Scrum Framework and contribute to all Agile ceremonies.",
-  salary_min:"900",
-  salary_max:"2500",
-  type_id:1,
-  company_id:5,
-  category_id:8},
-
-  {name:"Ruby on Rails Developer",#02
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-  {name:"Portuguese Teacher",#03
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-  
-  {name:"SAP ABAP Developer",#04
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-  {name:"Backend Software Developer (Golang)",#05
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-  {name:"Business Intelligence Analyst",#06
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-  {name:"Data Scientist",#07
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-  {name:"Finance Analyst",#08
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-  {name:"UX/UI Designer",#09
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-  {name:"Associate Attorney",#10
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-  {name:"Product Owner",#11
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-  {name:"Demand Planner",#12
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-  {name:"Sales Specialist",#13
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-  {name:"",#14
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-  {name:"",#15
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-  {name:"",#16
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-
-  {name:"",#17
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-  {name:"",#18
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-  {name:"",#19
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-
-  {name:"",#20
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-
-  {name:"",#21
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-
-  {name:"",#22
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-  {name:"",#23
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-  {name:"",#24
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
-
-
-  {name:"",#25
-  description:"",
-  salary_min:"",
-  salary_max:"",
-  type_id:,
-  company_id:,
-  category_id:},
+statuses = Status.create([
+  {name: "Waiting"},
+  {name: "In progress"},
+  {name: "Finished"},
+  {name: "Declined"}
 ])
 
+job = Job.create([
+#   {name:"Full-stack Developer",#01
+#   description:"Design, develop and debug internet-facing applications to company and industry standards of quality and security.
+#   Perform code peer reviews and participate in technical discussions.
+#   Work within Agile Scrum Framework and contribute to all Agile ceremonies.",
+#   salary_min:"900",
+#   salary_max:"2500",
+#   type_id:1,
+#   company_id:5,
+#   category_id:8},
 
+#   {name:"Ruby on Rails Developer",#02
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+#   {name:"Portuguese Teacher",#03
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+  
+#   {name:"SAP ABAP Developer",#04
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+#   {name:"Backend Software Developer (Golang)",#05
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+#   {name:"Business Intelligence Analyst",#06
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+#   {name:"Data Scientist",#07
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+#   {name:"Finance Analyst",#08
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+#   {name:"UX/UI Designer",#09
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+#   {name:"Associate Attorney",#10
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+#   {name:"Product Owner",#11
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+#   {name:"Demand Planner",#12
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+#   {name:"Sales Specialist",#13
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+#   {name:"",#14
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+#   {name:"",#15
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+#   {name:"",#16
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+
+#   {name:"",#17
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+#   {name:"",#18
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+#   {name:"",#19
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+
+#   {name:"",#20
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+
+#   {name:"",#21
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+
+#   {name:"",#22
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+#   {name:"",#23
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+#   {name:"",#24
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+
+
+#   {name:"",#25
+#   description:"",
+#   salary_min:"",
+#   salary_max:"",
+#   type_id:,
+#   company_id:,
+#   category_id:},
+# ])
+
+
+  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)},
+  {name: Faker::Job.position, description: Faker::Lorem.paragraph, salary_min: Faker::Number.between(from: 500, to: 1000) , salary_max: Faker::Number.between(from: 1500, to: 3000), type_id:Faker::Number.between(from: 1, to: 5), company_id:Faker::Number.between(from: 1, to: 10), category_id:Faker::Number.between(from: 1, to: 9)}
+])
 
 #user = User.create
+user = User.create([
+  {email:"test@mail.com", password:"asdasd", password_confirmation:"asdasd", userable:Professional.first},
+  {email:"testino@mail.com", password:"asdasd", password_confirmation:"asdasd", userable:Company.first}
+])
 
 
 application = Appilations.create([
