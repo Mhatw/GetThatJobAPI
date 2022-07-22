@@ -5,6 +5,7 @@ class Professional < ApplicationRecord
   has_many :applications, dependent: :destroy
   has_many :jobs, through: :applications
   has_many :followings, dependent: :destroy
+  has_one_attached :cv
 
   # validates
   PHONE_REGEX = /\A\+[0-9]{6,13}\Z/

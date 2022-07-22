@@ -13,6 +13,6 @@ class ProfessionalsController < ApplicationController
   private
 
   def professional_params
-    params.require(:professional).permit(:name, :phone, :birth_date, :linkedin_url, :experience, :education, :profession_id)
+    params.require(:professional).permit(:name, :phone, :birth_date, :linkedin_url, :experience, :education, :profession_id, :cv)
   end
 end
