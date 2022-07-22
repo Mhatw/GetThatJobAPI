@@ -14,6 +14,8 @@ class ApplicationsController < ApplicationController
   def create
     @application = Application.new(application_params)
     @application.professional = current_user.userable
+    # @application.experience = current_user.userable.experience
+    # p @application.experience
 
 
     if @application.save
@@ -42,7 +44,7 @@ class ApplicationsController < ApplicationController
   end
 
   def application_params
-    params.require(:application).permit(:follow, :message, :job_id, :professional_id, :status_id, :cv)
+    params.require(:application).permit(:follow, :message, :job_id, :professional_id, :status_id, :cv, :experience)
   end
 
   # to index
