@@ -7,8 +7,16 @@ class RequirementsController < ApplicationController
   end
 
   def create
-    params[:requirements].each do |requirement|
-      @requirement = Requirement.new(requirement)
+    params[:mandatory_requirements].split("\n").each do |requirement|
+      @requirement = Requirement.new({
+        content: requirement,
+        mandatory: true
+      })
+      @requirement.job = @job
+      @requirement.save
+    end
+    params[:optional_requirements].split("\n").each do |requirement|
+      @requirement = Requirement.new({ content: requirement })
       @requirement.job = @job
       @requirement.save
     end
