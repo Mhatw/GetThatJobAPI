@@ -1,6 +1,11 @@
 class FollowingsController < ApplicationController
   before_action :set_professional
 
+  def index
+    @followings = @professional.followings
+    render json: @followings
+  end
+
   def create
     @following = @professional.followings.new(following_params)
     if @following.save

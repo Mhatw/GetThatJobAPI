@@ -10,6 +10,15 @@ class ProfessionalsController < ApplicationController
     end
   end
 
+  def update
+    @professional = Professional.find(params[:id])
+    if @professional.update(professional_params)
+      render json: @professional
+    else
+      render json: { errors: @professional.errors.full_messages }, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def professional_params
