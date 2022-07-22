@@ -79,6 +79,7 @@ class JobsController < ApplicationController
         salary_min: job.salary_min,
         salary_max: job.salary_max,
         created_at: job.created_at,
+        following: !!job.followings.find_by(professional_id: current_user.userable.id),
         company: job.company,
         logo_url: url_for(job.company.logo),
         mandatory_requirements: job.requirements.select(&:mandatory),

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_21_171153) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_22_071448) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -43,7 +43,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_21_171153) do
   end
 
   create_table "applications", force: :cascade do |t|
-    t.boolean "follow"
     t.text "message"
     t.bigint "job_id", null: false
     t.bigint "professional_id", null: false
@@ -69,6 +68,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_21_171153) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_companies_on_name", unique: true
+  end
+
+  create_table "followings", force: :cascade do |t|
+    t.bigint "job_id", null: false
+    t.bigint "professional_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["job_id"], name: "index_followings_on_job_id"
+    t.index ["professional_id"], name: "index_followings_on_professional_id"
   end
 
   create_table "jobs", force: :cascade do |t|
@@ -145,6 +153,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_21_171153) do
   add_foreign_key "applications", "jobs"
   add_foreign_key "applications", "professionals"
   add_foreign_key "applications", "statuses"
+  add_foreign_key "followings", "jobs"
+  add_foreign_key "followings", "professionals"
   add_foreign_key "jobs", "categories"
   add_foreign_key "jobs", "companies"
   add_foreign_key "jobs", "types"
