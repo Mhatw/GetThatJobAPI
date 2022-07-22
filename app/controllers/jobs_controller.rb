@@ -81,7 +81,7 @@ class JobsController < ApplicationController
         created_at: job.created_at,
         following: !!job.followings.find_by(professional_id: current_user.userable.id),
         company: job.company,
-        logo_url: url_for(job.company.logo),
+        logo_url: job.company.logo.attached? ? url_for(job.company.logo) : nil,
         mandatory_requirements: job.requirements.select(&:mandatory),
         optional_requirements: job.requirements.reject(&:mandatory)
       }
