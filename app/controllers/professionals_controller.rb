@@ -1,5 +1,5 @@
 class ProfessionalsController < ApplicationController
-  skip_before_action :authorize, only: :create
+  skip_before_action :authorize, only: %i[create update]
 
   def create
     professional = Professional.new(professional_params)
@@ -13,7 +13,7 @@ class ProfessionalsController < ApplicationController
   def update
     @professional = Professional.find(params[:id])
     if @professional.update(professional_params)
-      render json: @professional
+      render json: @professional.as_json.merge(cv_url: url_for(@professional.cv))
     else
       render json: { errors: @professional.errors.full_messages }, status: :unprocessable_entity
     end
