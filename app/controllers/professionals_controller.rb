@@ -13,7 +13,7 @@ class ProfessionalsController < ApplicationController
   def update
     @professional = Professional.find(params[:id])
     if @professional.update(professional_params)
-      render json: @professional.as_json.merge(cv_url: url_for(@professional.cv))
+      render json: @professional
     else
       render json: { errors: @professional.errors.full_messages }, status: :unprocessable_entity
     end

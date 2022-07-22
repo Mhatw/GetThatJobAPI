@@ -12,8 +12,8 @@ class SessionsController < ApplicationController
         id: user.id,
         email: user.email,
         user_type: user.userable_type,
-        userable: user.userable
-        # logo_url: user.userable_type == "Company" && user.userable.logo.attached? ? url_for(user.userable.logo) : nil
+        userable: user.userable,
+        logo_url: user.userable_type == "Company" && user.userable.logo.attached? ? url_for(user.userable.logo) : nil
       }, status: :created
     else
       respond_unauthorized("Incorrect email or password")
