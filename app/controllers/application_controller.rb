@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
   include ActionController::HttpAuthentication::Token::ControllerMethods
-  
+
   before_action :authorize
 
   def current_user
