@@ -5,5 +5,5 @@ class Company < ApplicationRecord
   has_one_attached :logo
 
   # Validates
-  validates :description, length: { in: 100..2000, message: "Must have between 100 and 2000 characters" }, allow_nil: true
+  validates :description, length: { in: 0..2000, message: "Must have between 100 and 2000 characters" }, allow_nil: true
 end
