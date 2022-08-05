@@ -13,7 +13,8 @@ class ProfessionalsController < ApplicationController
   def update
     @professional = Professional.find(params[:id])
     if @professional.update(professional_params)
-      render json: @professional
+      cv_url = @professional.cv.attached? ? url_for(@professional.cv) : ""
+      render json: { professional: @professional, cv_url: }
     else
       render json: { errors: @professional.errors.full_messages }, status: :unprocessable_entity
     end

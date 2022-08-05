@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def show
     user_type = current_user.userable_type
-    data_user = user_type == "Professional" ? set_professional(user_type) : set_company(user_type)
+    data_user = user_type == "Professional" ? data_professional(user_type) : data_company(user_type)
     render json: data_user
   end
 
@@ -29,12 +29,14 @@ class UsersController < ApplicationController
 
   private
 
-  def set_professional(user_type)
+  def data_professional(user_type)
     profession = current_user.userable.profession
-    @data_professional = current_user.userable.as_json.merge(email: current_user.email, user_type:, profession:, user_id: current_user.id)
+    professional = current_user.userable
+    cv_url = professional.cv.attached? ? url_for(professional.cv) : ""
+    @data_professional = professional.as_json.merge(email: current_user.email, user_type:, profession:, user_id: current_user.id, cv_url:)
   end
 
-  def set_company(user_type)
+  def data_company(user_type)
     company = current_user.userable
     logo_url = company.logo.attached? ? url_for(company.logo) : ""
     @data_company = company.as_json.merge(email: current_user.email, user_type:, user_id: current_user.id, logo_url:)
