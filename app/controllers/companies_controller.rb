@@ -13,7 +13,8 @@ class CompaniesController < ApplicationController
   def update
     @company = Company.find(params[:id])
     if @company.update(company_params)
-      render json: @company
+      logo_url = @company.logo.attached? ? url_for(@company.logo) : ""
+      render json: { company: @company, logo_url: }
     else
       render json: { errors: @company.errors.full_messages }, status: :unprocessable_entity
     end
